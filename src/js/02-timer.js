@@ -27,7 +27,7 @@ const options = {
     
     onClose(selectedDates) {
       if(selectedDates[0] <= options.defaultDate) {
-        window.alert("Please choose a date in the future");
+        Notiflix.Notify.info("Please choose a date in the future");
       } else startBtn.disabled = false;
       userSelectedDate = selectedDates[0];
     },
@@ -39,12 +39,12 @@ const timer = {
         let timerId = null;
 
         startBtn.disabled = true;
-       timerId = setInterval((milliseconds) => {
+       timerId = setInterval(() => {
             const currentTime = Date.now();
             const ms = userSelectedDate - currentTime;
             const { days, hours, minutes, seconds } = convertMs(ms);
             console.log(`${days}:${hours}:${minutes}:${seconds}`);  
-
+printTime({ days, hours, minutes, seconds });
             if(ms <= 0) {
                 clearInterval(timerId);
                 return
@@ -58,9 +58,9 @@ startBtn.addEventListener('click', () => {
     timer.start();
 })
 
-function updateClockface({ days, hours, minutes, seconds }) {
-    clockface.textContent = `${days}:${hours}:${minutes}:${seconds}`;
-}
+// function updateClockface({ days, hours, minutes, seconds }) {
+//     clockface.textContent = `${days}:${hours}:${minutes}:${seconds}`;
+// }
 
 
   function convertMs(ms) {
