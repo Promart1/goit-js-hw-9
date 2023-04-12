@@ -16,3 +16,24 @@ img {
   display: block;
   max-width: 100%;
 }
+
+
+.timer {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  text-align: center;
+  color: #212121;
+ 
+}
+
+.value {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 80px;
+  color: blue;
+}
+.label {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 20px;
+  color: cadetblue;
+}
