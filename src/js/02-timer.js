@@ -11,9 +11,6 @@ import 'flatpickr/dist/flatpickr.min.css';
    const minutesEl = document.querySelector('.value[data-minutes]');
    const secondsEl = document.querySelector('.value[data-seconds]');
 
-
-
-
 let userSelectedDate = null;
 
 
