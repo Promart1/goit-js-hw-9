@@ -17,7 +17,8 @@ function handleSubmit(ev) {
 
 for (let i = 1; i <= amount; i += 1) {
   position = i;
-  createPromise(2, 1500)
+  
+  createPromise(i, delay)
   .then(({ position, delay }) => {
     Notiflix.Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`);
   })
@@ -27,7 +28,7 @@ for (let i = 1; i <= amount; i += 1) {
 
 delay += step;
 }
-form.reset();
+// form.reset();
 }
 
 form.addEventListener('submit', handleSubmit);

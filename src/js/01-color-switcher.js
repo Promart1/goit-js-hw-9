@@ -17,10 +17,7 @@ stopBtn.addEventListener("click", () => {
     startBtn.disabled = false;
 })
 
-function changeColor() {
-        const color = getRandomHexColor();
-        body.style.background = color;
-      };
+
 
 function changeColor() {
     const color = getRandomHexColor();
