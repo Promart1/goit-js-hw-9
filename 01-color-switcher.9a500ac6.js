@@ -1,0 +1,2 @@
+const t=document.querySelector("button[data-start]"),e=document.querySelector("button[data-stop]"),o=document.querySelector("body");let n=null;function a(){const t=`#${Math.floor(16777215*Math.random()).toString(16).padStart(6,0)}`;o.style.background=t}t.addEventListener("click",(()=>{n=setInterval((()=>{a(),t.disabled=!0,console.log(a)}),1e3)})),e.addEventListener("click",(()=>{clearInterval(n),t.disabled=!1}));
+//# sourceMappingURL=01-color-switcher.9a500ac6.js.map
